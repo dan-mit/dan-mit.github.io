@@ -1,7 +1,7 @@
 //References to the HTML List and Input elements
 const inputBox = document.getElementById("inputBox")
 const taskList = document.getElementById("taskList")
-//Allows for
+//Handles the event of any empty task being added
 function addTask(){
     if(inputBox.value == ''){
         alert("Task cannot be empty.");

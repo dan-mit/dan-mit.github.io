@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    margin-left: 95px;
 }
 .app h1 img{
     width: 50px;
@@ -69,7 +70,7 @@ ul li::before{
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    bottom: 10px;
+    bottom: 14px;
     left: 7px;
 }
 ul li.checked{
@@ -92,4 +93,5 @@ ul li cross{
 }
 ul li cross:hover{
     background: #80808058;
+    border-radius: 30px;
 }
