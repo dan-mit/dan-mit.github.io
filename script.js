@@ -50,7 +50,7 @@ taskList.addEventListener("click", function(n){
         inputField.type = "text";
         inputField.value = currentTask;
         let spanWidth = taskSpan.offsetWidth;
-        inputField.style.width = (spanWidth - 100) + "px"
+        inputField.style.width = (spanWidth - 300) + "px"
         taskSpan.parentElement.replaceChild(inputField, taskSpan);
 
         inputField.focus();

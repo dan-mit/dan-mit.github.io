@@ -18,9 +18,9 @@ body, html{
     margin: 100px auto;
     padding: 40px 30px 60px;
     border-radius: 20px;
-    width: fit-content;
-    min-width: 30vw;
-    max-width: 80vw;
+    box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 40vw;
     background-color: #fff;
 }
 .app h1{
@@ -71,6 +71,10 @@ ul li{
     cursor: pointer;
     position: relative;
     white-space: normal;
+    background: #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 ul li::before{
     content: '';
@@ -94,7 +98,7 @@ ul li.checked::before{
 ul li cross{
     position: absolute;
     right: 0;
-    top:12px;
+    top:6px;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -112,13 +116,14 @@ ul li button{
     border: none;
     background:#e1e1e1ab;
     border-radius: 30px;
-    top: 12px;
+    top: 8px;
     right: 45px;
 }
 ul li button:hover{
     background: #80808058;
 }
 ul li input{
+    display: inline-block;
     border: none;
     outline: none;
     background: transparent;
@@ -127,7 +132,6 @@ ul li input{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    width: calc(100%-100px);
     max-width: calc(40vw - 100px);
 }
 ul li span.task{
@@ -136,9 +140,6 @@ ul li span.task{
     overflow: visible;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    max-width: calc(40vw - 100px);
+    max-width: calc(40vw - 200px);
     margin-right: 80px;
-}
-ul li input:focus{
-    min-width: 50vh;
 }
