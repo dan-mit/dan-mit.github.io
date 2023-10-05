@@ -24,6 +24,11 @@ function addTask(){
         let cross = document.createElement("cross");
         cross.innerHTML = "\u00d7";
         li.appendChild(cross);
+        //date picker
+        let dateInput = document.createElement("input");
+        dateInput.type = "date";
+        dateInput.classList.add("due-date");
+        li.appendChild(dateInput);
     
         taskList.appendChild(li);
     inputBox.value = "";
