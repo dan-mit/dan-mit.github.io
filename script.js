@@ -2,6 +2,11 @@
 const inputBox = document.getElementById("inputBox");
 const taskList = document.getElementById("taskList");
 const appContainer = document.querySelector('.app');
+//References to the sound files
+const checkSound = new Audio('sounds/check.wav');
+const deleteSound = new Audio('sounds/delete.flac');
+checkSound.volume = 0.3;
+deleteSound.volume = 0.5;
 //Handles the event of any empty task being added
 function addTask(){
     if(inputBox.value == ''){
@@ -42,10 +47,12 @@ and either checks the task off or removes if clicked on cross */
 taskList.addEventListener("click", function(n){
     if(n.target.tagName === "LI" && !n.target.hasAttribute('data-editing')){
         n.target.classList.toggle("checked");
+        checkSound.play();
         saveData();
     }
     else if(n.target.tagName === "CROSS"){
         n.target.parentElement.remove();
+        deleteSound.play();
         saveData();
     }
     /*The following code allows for the edit button to work in-line rather
@@ -73,10 +80,7 @@ taskList.addEventListener("click", function(n){
             }
         n.target.parentElement.setAttribute('data-editing','true');
         });
-        //This is the old way of editing the task, by prompting
-        /* let newTask = prompt("Edit Task: ", taskSpan.innerHTML)
-        if(newTask) taskSpan.innerHTML = newTask;
-        saveData(); */
+        
     }
 }, false);
 //The following listener checks for the enter ket to be pressed to append task to list
