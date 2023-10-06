@@ -24,11 +24,14 @@ function addTask(){
         let cross = document.createElement("cross");
         cross.innerHTML = "\u00d7";
         li.appendChild(cross);
-        //date picker
+        //adds a date picker to the task, allowing to set due dates for specific tasks
         let dateInput = document.createElement("input");
         dateInput.type = "date";
         dateInput.classList.add("due-date");
         li.appendChild(dateInput);
+        //adds a priiority selector which changes the color of the bubble based on the selected color
+        let prioritySelector = createPrioritySelector();
+        li.appendChild(prioritySelector);
     
         taskList.appendChild(li);
     inputBox.value = "";
@@ -103,5 +106,42 @@ function saveInlineEdit(){
 
     saveData();
 }
+//This function will create a priority selector to append to the the task bubble
+function createPrioritySelector(){
+    let select = document.createElement("select");
+    select.classList.add("priority-selector");
 
+    let priorities = ["Select Priority","High","Medium","Low"];
+    priorities.forEach(priority => {
+        let option = document.createElement("option");
+        option.value = priority.toLowerCase();
+        option.innerText = priority;
+        select.appendChild(option);
+    });
+    //Event listener to change the color
+    select.addEventListener("change", function() {
+        changeTaskColor(this);
+    });
+
+    return select;
+}
+//This function assigns colors to the task bubble based on chosen priority
+function changeTaskColor(selector) {
+    const priority = selector.value;
+    const taskItem = selector.closest("li");
+
+    switch(priority) {
+        case "high":
+            taskItem.style.backgroundColor = "#ff8f87";
+            break;
+        case "medium":
+            taskItem.style.backgroundColor = "#fffb87";
+            break;
+        case "low":
+            taskItem.style.backgroundColor = "#a9ff87";
+            break;
+        default:
+            taskItem.style.backgroundColor = "";
+    }
+}
 showList();
