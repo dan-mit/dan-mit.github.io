@@ -1,161 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #73ceff, #ffffff);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
 }
-body, html{
-    height: 100%;
-    min-height: 100%;
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-.page{
-    min-height: 100vh;
-    width: 100%;
-    background: linear-gradient(135deg, #19a2dc,#9424d0, #f8ac20);
-    padding: 10px;
+
+#baggageInfo {
+  margin-top: 20px;
+  border: 1px solid #39f7fe;
+  padding: 10px;
+  border-radius: 20px;
 }
-.app{
-    margin: 100px auto;
-    padding: 40px 30px 60px;
-    border-radius: 20px;
-    box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 40vw;
-    background-color: #fff;
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
 }
-.app h1{
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-left: 0px;
-    justify-content: center;
+
+select {
+  padding: 5px;
+  margin: 10px 0;
 }
-.app h1 img{
-    width: 50px;
-    margin-left: 10px;
+
+.topMenu {
+  margin: 0;
+  padding: 0;
+  background-color: #bce7ff;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+  list-style-type: none;
 }
-.row{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    background: #e1e1e1ab;
-    border-radius: 30px;
-    padding-left: 0px;
-    margin-bottom: 40px;
-    max-width: 80vw;
+
+.topMenu li:hover {
+  display: inline-block;
+  background: #00fbff;
+  color: rgb(51, 11, 170);
+  border-radius: 10px;
 }
-input{
-    padding-left: 30px;
-    font-weight: 14px;
-    flex: 1;
-    border: 30px;
-    outline: none;
-    background: transparent;
+
+.topMenu li {
+  display: inline-block;
+  padding: 10px;
+  transition-duration: 300ms;
 }
-.row button{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 15px 50px;
-    background: #ffc0cb;
-    border-radius: 30px;
+
+.select {
+  background-color: #e9abff;
+  text-align: center;
+  border-radius: 10px;
 }
-ul li{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    font-style: 17px;
-    padding: 12px 40px 22px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-    white-space: normal;
-    background: #f1f1f1;
-    border-radius: 15px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+
+.dropdownMenu {
+  background-color: #65c7ff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 10px;
 }
-ul li::before{
-    content: '';
-    position: absolute;
-    height: 22px;
-    width: 22px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 7px;
+
+.paddingForList {
+  padding-bottom: 5px;
 }
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
+
+.list {
+  text-align: center;
+  list-style-type: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: #ffbbbb;
+  text-align: center;
+  border-radius: 10px;
+  border-color: rgb(4, 243, 48);
+  border-width: 5px;
 }
-ul li.checked::before{
-    background-image: url(images/checked.png);
+
+.list.highlight{
+  background: #2df006af;
 }
-ul li cross{
-    position: absolute;
-    right: 0;
-    top:6px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
-    color: red;
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
 }
-ul li cross:hover{
-    background: #80808058;
-    border-radius: 30px;
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
 }
-ul li button{
-    position: absolute;
-    padding: 5px 10px;
-    border: none;
-    background:#e1e1e1ab;
-    border-radius: 30px;
-    top: 8px;
-    right: 45px;
+
+h2, h3 {
+  color: #0056b3;
 }
-ul li button:hover{
-    background: #80808058;
+
+p {
+  margin-bottom: 10px;
 }
-ul li input{
-    display: inline-block;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: inherit;
-    color: inherit;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: calc(40vw - 100px);
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
 }
-ul li span.task{
-    flex: 1;
-    white-space: normal;
-    overflow: visible;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    max-width: calc(40vw - 220px);
-    margin-right: 80px;
+.container > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-.due-date{
-    position: absolute;
-    top: 40px;
-    right: 6px;
-    width: 100px;
-    font-size: 11px;
+button {
+  border-radius: 8px;
+  border: 3px;
+  padding: 5px;
+  background-color: #bce7ff;
+  cursor: pointer;
 }
-.priority-selector{
-    width: 20px;
-    height: 15px;
-    border-radius: 5px;
-    position: absolute;
-    top: 40px;
-    left: 8px;
-    font-size: 12px;
+button:hover {
+  background: #00fbff;
+  color: rgb(51, 11, 170);
+  border-radius: 8px;
 }

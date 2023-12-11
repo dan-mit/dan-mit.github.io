@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline Baggage Information</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+  <div>
+    <ul class="topMenu">
+      <li><a href="index.html">Domestic Flights</a></li>
+      <li><a href="internationalview.html">International Flights</a></li>
+      <li><a href="listview.html">List View</a></li>
+      <li><a href="howto.html">How to Measure</a></li>
+    </ul>
+  </div>
+
+<div class="container">
+  <h1>International Baggage Rules</h1>
+  
+  <div class="select">
+    <label for="airlineSelect">Select Airline:</label>
+    <select id="airlineSelect" class="dropdownMenu" onchange="flightselected(this.value)">
+      <option value="">== Please Select An Airline ==</option>
+      <option value=""></option>
+      <option value="">= Africa / Middle East = </option>
+      <option value="Emirates">Emirates Airline</option>
+      <option value="Qatar">Qatar Airlines</option>
+      <option value="Saudi">Saudi Arabian Airlines</option>
+      <option value=""></option>
+      <option value="">= Asia/Pacific =</option>
+      <option value="AirAsia">AirAsia</option>
+      <option value="AirChina">Air China</option>
+      <option value="ANZG">Air New Zealand Group</option>
+      <option value="ANA">All Nippon Airways</option>
+      <option value="Asiana">Asiana Airlines</option>
+      <option value="Cathay">Cathay Pacific</option>
+      <option value="Cubu">Cebu Pacific Air</option>
+      <option value="ChinaAirlines">China AirLines</option>
+      <option value="CEA">China Easter Airlines</option>
+      <option value="CSA">China Southern Airlines</option>
+      <option value="Garuda">Garuda Indonesia</option>
+      <option value="Hainan">Hainan</option>
+      <option value="JAL">Japan Airlines</option>
+      <option value="JetAirways">Jet AirWays</option>
+      <option value="Jetstar">Jetstar</option>
+      <option value="KoreanAir">Korean Air</option>
+      <option value="LionAir">Lion Air</option>
+      <option value="MalaysiaAirlines">Malaysia Airlines</option>
+      <option value="Qantas">Qantas</option>
+      <option value="ShenzhenAirlines">Shenzhen Airlines</option>
+      <option value="SingaporeAirlines">Singapore Airlines</option>
+      <option value="VietnamAirlines">Vietnam Airlines</option>
+      <option value="VirginBlue">Virgin Blue Airlines</option>
+      <option value=""></option>
+      <option value="">= Europe =</option>
+      <option value="AirFrance">Air France KLM</option>
+      <option value="AustrianAG">Austrian Airlines Group</option>
+      <option value="BritishAirways">British Airways</option>
+      <option value="easyJet">easyJet</option>
+      <option value="Lufthansa">Lufthansa</option>
+      <option value="NorwegianAS">Norwegian Air Shuttle</option>
+      <option value="SASSA">SAS Scandinavian Airlines</option>
+      <option value="Swiss">Swiss</option>
+      <option value="Thomson">Thomson</option>
+      <option value="Vueling">Vueling Airlines</option>
+      <option value=""></option>
+      <option value="">= Latin America/Caribbean =</option>
+      <option value="Avianca">Avianca</option>
+      <option value="GolLinhas">Gol Linhas Aereas</option>
+      <option value="LANA">LATAM Airlines</option>
+      <option value=""></option>
+      <option value="">= North America = </option>
+      <option value="AirCanada">Air Canada</option>
+      <option value="AirTran">Air Tran</option>
+      <option value="Alaska">Alaska Airlines</option>
+      <option value="American">American Airlines</option>
+      <option value="ASA">Atlantic Southeast Airlines</option>
+      <option value="Continental">Continental Airlines</option>
+      <option value="Delta">Delta Air Lines</option>
+      <option value="JetBlue">JetBlue Airways</option>
+      <option value="SouthWest">Southwest Airlines</option>
+      <option value="United">United Airlines</option>
+      <option value="WestJet">WestJet</option>
+    </select>
+</div>
+
+
+  <div id="baggageInfo">
+    <h2>Baggage Information</h2>
+    <p><strong>Carry-on Size:</strong> <span id="carryOnSize">N/A</span></p>
+    <p><strong>Personal Item Size:</strong> <span id="personalItemSize">N/A</span></p>
+    <p><strong>Maximum Weight:</strong> <span id="maxWeight">N/A</span></p>
+    <button onclick="convertToMetric()">Toggle Metric/Imperial</button>
+  </div>
+</div>
+
+<p style="text-align: center;">*No official personal item was specified. This can be limited to a laptop bag, purse or any small item.</p>
+<p style="text-align: center;">In cases like this, it is best to use judgement and do further research, but an average 15in laptop bag can fit.</p>
+</body>
+</html>

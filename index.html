@@ -1,26 +1,49 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline Baggage Information</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<html>
+  <div>
+    <ul class="topMenu">
+      <li><a href="index.html">Domestic Flights</a></li>
+      <li><a href="internationalview.html">International Flights</a></li>
+      <li><a href="listview.html">List View</a></li>
+      <li><a href="howto.html">How to Measure</a></li>
+    </ul>
+  </div>
 
-    <head>
-        <title>To Do List</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<div class="container">
+  <h1>Domestic Baggage Rules</h1>
+  
+  <div class="select">
+    <label for="airlineSelect">Select Airline:</label>
+    <select id="airlineSelect" class="dropdownMenu" onchange="flightselected(this.value)">
+      <option value="">== Please Select An Airline ==</option>
+      <option value="JetBlue">JetBlue Airways</option>
+      <option value="United">United Airlines</option>
+      <option value="Delta">Delta Airlines</option>
+      <option value="American">American Airlines</option>
+      <option value="SouthWest">SouthWest Airlines</option>
+    </select>
+</div>
 
-    <body>
-        <div class ="page">
-            <div class = "app">
-                <h1> To Do List <img src = "images/icon.png"></h1>
-                <div class="row">
-                    <input type = "text" id="inputBox" placeholder="Add your task">
-                    <button onclick="addTask()">Add</button>
-                </div>
-                <ul id="taskList">
-            </div>
-        </div>
-        <script src = script.js></script>
-    </body>
 
+  <div id="baggageInfo">
+    <h2>Baggage Information</h2>
+    <p><strong>Carry-on Size:</strong> <span id="carryOnSize">N/A</span></p>
+    <p><strong>Personal Item Size:</strong> <span id="personalItemSize">N/A</span></p>
+    <p><strong>Maximum Weight:</strong> <span id="maxWeight">N/A</span></p>
+    <button onclick="convertToMetric()">Toggle Metric/Imperial</button>
+  </div>
+</div>
+
+<p style="text-align: center;">*No official personal item was specified. This can be limited to a laptop bag, purse or any small item.</p>
+<p style="text-align: center;">In cases like this, it is best to use judgement and do further research, but an average 15in laptop bag can fit.</p>
+<script src="script.js"></script>
+</body>
 </html>
